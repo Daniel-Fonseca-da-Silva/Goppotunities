@@ -6,6 +6,8 @@ import (
 )
 
 func InitializeRoutes(router *gin.Engine) {
+	// Initialize Handler
+	handler.InitializeHandler()
 	v1 := router.Group("/api/v1")
 	{
 		v1.GET("/opening", handler.ShowOpeningHandler)
